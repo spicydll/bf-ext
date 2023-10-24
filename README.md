@@ -16,7 +16,7 @@ The `$` operator copies 48 bytes starting at the current pointer and sends them 
 ### Dereference Operator: `@`
 
 Since any pointer passed to a syscall needs an actual memory pointer and not an index in the array, we need a way to get the memory address of an index the programmer would know. When encountered, the interpreter takes the next 4 bytes starting at the current pointer and 
-indexes into the memory array with it as if it were an integer. It then takes the memory location of that integer and stores it as 8 bytes starting at the current memory pointer.
+indexes into the memory array with it as if it were an integer. It then gets a pointer to that index in the memory array and stores it as 8 bytes starting at the current memory pointer.
 
 ## Build
 
